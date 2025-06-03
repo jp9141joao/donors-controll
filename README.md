@@ -1,104 +1,109 @@
-# 🩺 **Sistema de Controle de Doadores (Node.js + Prisma)** 💾
+# 🩺 **Donor Control System (Node.js + Prisma)** 💾
 
-Este projeto implementa um sistema de gerenciamento de doadores, famílias, doações e transações financeiras com rotas seguras utilizando **Node.js**, **Express**, **Prisma**, e autenticação por permissões. O sistema é projetado para fornecer operações CRUD e operações seguras para dados relacionados a doadores e suas doações.
-
----
-
-## **Observacoes**
-
--- Somente o modulo de doadores foi enviado para o GIT por motivos de seguranca, caso tenha interesse em mais partes do codigo por favor entrar em contato
-
-## 🚀 **Visão Geral do Projeto**
-
-Este projeto tem o objetivo de:
-
-- Gerenciar dados de **doadores**, **famílias**, **doações** e **transações PIX**.
-- Oferecer uma API RESTful com rotas seguras por meio de autenticação baseada em **permissões de roles**.
-- Utilizar **Prisma ORM** para gerenciar interações com o banco de dados.
-- Documentar automaticamente as rotas por meio do **Swagger**.
+This project implements a donor management system, handling donors, families, donations, and financial transactions with secure routes using **Node.js**, **Express**, **Prisma**, and permission-based authentication. The system is designed to provide CRUD operations and secure handling of data related to donors and their donations.
 
 ---
 
-## 🛠️ **Estrutura do Projeto**
+## **Notes**
 
-O sistema é composto pelos seguintes componentes:
+\-- Only the donor module was uploaded to this Git repository for security reasons.
+If you are interested in other parts of the code, please contact us.
+
+---
+
+## 🚀 **Project Overview**
+
+This project aims to:
+
+* Manage data of **donors**, **families**, **donations**, and **PIX transactions**.
+* Provide a RESTful API with secure routes through **role-based permission authentication**.
+* Use **Prisma ORM** to manage database interactions.
+* Automatically document routes using **Swagger**.
+
+---
+
+## 🛠️ **Project Structure**
+
+The system consists of the following components:
 
 ```
-/doadores-system
+/donors-system
 │
-├── /controllers          # Contém a lógica central de cada operação.
-│   ├── index.js         # Funções para controle de operações CRUD.
+├── /controllers          # Contains the core logic for each operation.
+│   ├── index.js          # Functions for CRUD operations control.
 │
-├── /routes              # Rotas principais com acesso seguro.
+├── /routes               # Main routes with secure access.
 │   └── index.js
 │
-├── /middlewares         # Lógica para verificar permissões e autorizações.
+├── /middlewares          # Logic to verify permissions and authorizations.
 │   └── verify-permissions.middleware.js
 │
-├── /prisma              # Configuração para interações com o banco de dados Prisma.
+├── /prisma               # Configuration for Prisma database interactions.
 │   └── schema.prisma
 │
-├── /docs                # Documentação Swagger.
+├── /docs                 # Swagger documentation.
 │   └── swagger.json
 │
-├── server.js            # Configuração principal para inicializar o Express.
+├── server.js             # Main configuration to initialize Express.
 │
-├── package.json         # Gerenciamento de pacotes npm.
+├── package.json          # npm package management.
 │
-└── README.md            # Documentação do projeto.
+└── README.md             # Project documentation.
 ```
 
 ---
 
-## ⚙️ **Configuração**
+## ⚙️ **Setup**
 
-### Pré-requisitos
-Certifique-se de ter o seguinte instalado em sua máquina:
+### Prerequisites
 
-1. **Node.js**: [Instale o Node.js aqui](https://nodejs.org/).
-2. **Prisma ORM**: Configure-o com o banco de dados que deseja usar.
+Make sure you have the following installed on your machine:
+
+1. **Node.js**: [Install Node.js here](https://nodejs.org/).
+2. **Prisma ORM**: Configure it with your preferred database.
 
 ---
 
-### Instalação
+### Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/seu-repositorio.git
+git clone https://github.com/jp9141joao/donors-controll.git
 ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Configure o banco de dados com Prisma:
+3. Set up the database with Prisma:
 
 ```bash
 npx prisma migrate dev
 ```
 
-4. Inicie o servidor com:
+4. Start the server:
 
 ```bash
 npm run dev
 ```
 
-Agora a aplicação estará no ar. Você pode acessar as rotas e a documentação Swagger automaticamente em `http://localhost:3000/docs`.
-
-
-## 📂 **Estrutura de Dados**
-
-Os dados do sistema estão organizados em 4 tabelas principais:
-
-- **Donors**: Contém informações de todos os doadores.
-- **Families**: Contém dados sobre as famílias dos doadores.
-- **Donations**: Registro de doações feitas.
-- **Pix Donations**: Transações financeiras do tipo PIX.
-- **Items Donations**: Informações detalhadas sobre os itens envolvidos em doações.
+The application will now be running. You can access the routes and the Swagger documentation automatically at `http://localhost:3000/docs`.
 
 ---
 
-Agora você está pronto para usar, testar e contribuir com o **Sistema de Controle de Doadores!** ✨🖥️
+## 📂 **Data Structure**
+
+The system data is organized into 4 main tables:
+
+* **Donors**: Contains information about all donors.
+* **Families**: Contains data about donors’ families.
+* **Donations**: Records of donations made.
+* **Pix Donations**: Financial transactions of the PIX type.
+* **Items Donations**: Detailed information about items involved in donations.
+
+---
+
+Now you’re ready to use, test, and contribute to the **Donor Control System!** ✨🖥️
